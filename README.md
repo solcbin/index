@@ -1,29 +1,35 @@
 # `solidity-index`
 
-```cpp
+## Usage 
 
-#if ETH_PARANOIA
-    if (isKnown(_block.info.hash()) && !details(_block.info.hash()))
-    {
-        LOG(m_loggerError) << "Known block just inserted has no details.";
-        LOG(m_loggerError) << "Block: " << _block.info;
-        LOG(m_loggerError) << "DATABASE CORRUPTION: CRITICAL FAILURE";
-        exit(-1);
-    }
+`solidity.index.json` contains all information
 
-    try
-    {
-        State canary(_db, BaseState::Empty);
-        canary.populateFromChain(*this, _block.info.hash());
-    }
-    catch (...)
-    {
-        LOG(m_loggerError) << "Failed to initialise State object form imported block.";
-        LOG(m_loggerError) << "Block: " << _block.info;
-        LOG(m_loggerError) << "DATABASE CORRUPTION: CRITICAL FAILURE";
-        exit(-1);
-    }
-#endif // ETH_PARANOIA
+### GraphQL Query
+
+```json
+                {
+                  "node": {
+                    "downloadUrl": "https://github.com/ethereum/solidity/releases/download/v0.8.0/solc-windows.exe",
+                    "release": {
+                      "publishedAt": "2020-12-16T17:40:49Z",
+                      "url": "https://github.com/ethereum/solidity/releases/tag/v0.8.0",
+                      "id": "MDc6UmVsZWFzZTM1MzUzODcy",
+                      "name": "Version 0.8.0",
+                      "description": "Solidity 0.8.0 is a breaking release of the Solidity compiler and language.
+\r\n\r\nFor a detailed explanation of the new features and changes, please see the [blog
+post](https://blog.soliditylang.org/2020/12/16/solidity-v0.8.0-release-announcement/).\r\n\r\n### Breaking Changes:\r\n*
+Code Generator: All arithmetic is checked by default"
+                    }
+                  }
+                }
+              ]
+            },
+            "url": "https://github.com/ethereum/solidity/releases/tag/v0.8.0",
+            "name": "Version 0.8.0"
+          }
+        ]
+      }
+      
 ```
 
 ### Solidity Versions 

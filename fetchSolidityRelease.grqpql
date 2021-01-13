@@ -1,0 +1,30 @@
+{
+  repository(owner: "ethereum", name: "solidity") {
+    description
+    id
+    sshUrl
+    url
+    releases(last: 100) {
+      totalCount
+      nodes {
+        id
+        releaseAssets(last: 50) {
+          edges {
+            node {
+              downloadUrl
+              release {
+                publishedAt
+                url
+                id
+                name
+                description
+              }
+            }
+          }
+        }
+        url
+        name
+      }
+    }
+  }
+}
