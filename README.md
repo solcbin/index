@@ -36,3 +36,22 @@ Code Generator: All arithmetic is checked by default"
 
 [releases](https://github.com/ethereum/homebrew-ethereum/commits/master/solidity.rb)
 
+### Solc MacOSX
+
+| **solc_bin** | **solc_url**                                                              |
+|--------------|---------------------------------------------------------------------------|
+| v0.6.9       | https://github.com/ethereum/solidity/releases/download/v0.6.9/solc-macos  |
+| v0.6.10      | https://github.com/ethereum/solidity/releases/download/v0.6.10/solc-macos |
+| v0.6.11      | https://github.com/ethereum/solidity/releases/download/v0.6.11/solc-macos |
+| v0.6.12      | https://github.com/ethereum/solidity/releases/download/v0.6.12/solc-macos |
+| v0.7.0       | https://github.com/ethereum/solidity/releases/download/v0.7.0/solc-macos  |
+| v0.7.1       | https://github.com/ethereum/solidity/releases/download/v0.7.1/solc-macos  |
+| v0.7.2       | https://github.com/ethereum/solidity/releases/download/v0.7.2/solc-macos  |
+| v0.7.3       | https://github.com/ethereum/solidity/releases/download/v0.7.3/solc-macos  |
+| v0.7.4       | https://github.com/ethereum/solidity/releases/download/v0.7.4/solc-macos  |
+| v0.7.5       | https://github.com/ethereum/solidity/releases/download/v0.7.5/solc-macos  |
+| v0.7.6       | https://github.com/ethereum/solidity/releases/download/v0.7.6/solc-macos  |
+| v0.8.0       | https://github.com/ethereum/solidity/releases/download/v0.8.0/solc-macos  |
+| v0.8.1       | https://github.com/ethereum/solidity/releases/download/v0.8.1/solc-macos  |
+
+
