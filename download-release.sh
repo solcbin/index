@@ -143,7 +143,7 @@ query_github_tag_info() {
 
     local page=1
     local tag_info_list="$(query_api "${endpoint}&page=${page}")"
-    while [[ $(echo "$tag_info_list" | jq '. | length') > 0 ]]; do
+    while [[ $(echo "$tag_info_list" | jq '. | length') -gt 0 ]]; do
         echo "$tag_info_list"
 
         ((++page))
@@ -265,7 +265,7 @@ download_release() {
                 assets: [ .assets[].name ]
             }'
 
-            for target in ${release_targets[@]}; do
+            for target in "${release_targets[@]}"; do
                 download_binary_from_github "$target" "$release_info" "$tag_info" "$solc_bin_dir"
             done
             ;;
