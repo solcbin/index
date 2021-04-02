@@ -1,0 +1,34 @@
+name: Build binaries and create release
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [windows-latest, macos-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    name: Build
+    steps:
+      - name: Clone solidity
+        uses: actions/checkout@v2.1.0
+        with:
+          repository: 'ethereum/solidity'
+          ref: 'v0.5.12'
+          submodules: 'recursive'
+      - name: Install deps
+        if: matrix.os != 'windows-latest'
+        run: ./scripts/install_deps.sh
+      - name: Install deps
+        if: matrix.os == 'windows-latest'
+        run: scripts\install_deps.bat
+      - name: Build solc
+        if: matrix.os != 'windows-latest'
+        run: ./scripts/build.sh
+      - name: Build solc
+        if: matrix.os == 'windows-latest'
+        run: cmake . && cmake --build . --config Release
