@@ -1,6 +1,6 @@
 {
   "name": "solidity-index",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "solidity releases",
   "main": "fetchSolidity.js",
   "scripts": {
@@ -10,7 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/contractshark/solidity-index.git"
   },
-  "keywords": ["ethereum", "solidity", "smart contracts", "blockchain", "defi"],
+  "keywords": [
+    "ethereum",
+    "solidity",
+    "smart contracts",
+    "blockchain",
+    "defi"
+  ],
   "author": "ContractShark Contributors",
   "license": "CC0-1.0",
   "bugs": {
