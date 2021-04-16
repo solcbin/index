@@ -1,0 +1,20 @@
+{
+  "name": "solidity-index",
+  "version": "1.0.0",
+  "description": "solidity releases",
+  "main": "fetchSolidity.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/contractshark/solidity-index.git"
+  },
+  "keywords": ["ethereum", "solidity", "smart contracts", "blockchain", "defi"],
+  "author": "ContractShark Contributors",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/contractshark/solidity-index/issues"
+  },
+  "homepage": "https://github.com/contractshark/solidity-index#readme"
+}
