@@ -3,6 +3,12 @@
 set -e
 set -o pipefail
 
+hash jq 2>/dev/null || {
+  echo >&2 "EXCEPTION - requires JQ but it's not installed."
+  echo >&2 "Exiting due to unmet requirements"
+  exit 1
+}
+
 default_source=github
 default_solidity_version=latest
 
